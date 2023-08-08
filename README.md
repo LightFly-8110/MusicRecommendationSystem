@@ -11,6 +11,7 @@ note: make sure to install the following modules before running the code.
 -> mysql.connector
 note: in the musicgen.py file, make sure to instal the mysql, then, change the password to **YOUR** current root password. (line 6)
 note: make sure to connect to mysql server (in workbench) and paste the **EXACT** commands as in backend.sql (run the commands line by line).
+note: in the musicgen.py file, in the line 105 of emotion() function, make sure to change the path og glob.glob("/path/name") to the current path, where your musicgen.py file is stored. (so that it can read the most recent img created when camera is opened).
 
 Contributors:
 G. Varun (21011102033)
