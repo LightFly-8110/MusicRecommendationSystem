@@ -102,7 +102,7 @@ def emotion():
 
     ts = 0
     found = None
-    for file_name in glob.glob("C:/Users/VarunG/Documents/Python Scripts/*"):
+    for file_name in glob.glob("C:/Users/varun/Documents/python practice/EMOTICA/*"): #subject to your path where musicgen.py is saved
         fts = os.path.getmtime(file_name)
         if fts > ts:
             ts = fts
@@ -118,10 +118,10 @@ def emotion():
         plt.show()
   
         # storing the result
-        result = DeepFace.analyze(img,actions=['emotion'])
+        result = DeepFace.analyze(img,actions=['emotion'],enforce_detection=False)
         '''res = DeepFace.analyze(img,actions=['age'])'''
         global final
-        final = result['dominant_emotion']
+        final = result[0]['dominant_emotion']
         # print result
         '''print(result)
         print("the dominant emotion: ",result['dominant_emotion'])
@@ -143,7 +143,7 @@ def emotion():
         
 root = Tk()
 root.title("Emotica - The Song Generator")
-root.iconbitmap("C:/Users/VarunG/Documents/Project/img.ico")
+root.iconbitmap("C:/Users/varun/Documents/python practice/EMOTICA/img.ico") #subject to your path where the img.ico is saved -> in the same folder as musicgen.py
 root.geometry("400x400")
 
 Label(root, text='''Welcome to Emotica!''',font=('Helveticabold',15)).grid(row=0, sticky=W)
